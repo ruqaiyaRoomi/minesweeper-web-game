@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MineSweeper</title>
+	<!-- Linking all the stylesheets -->
+	<link rel="stylesheet" href="../css/minesweeper.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<!--Creating a gradient background-->
+<body style="background-image: linear-gradient(black 30%, #FF204E 80%); background-size: cover; height: 100vh; margin: 0;">
+	<!-- nav bar-->
+    <header>
+	<a href="index.html" id="game_title"><h1>Minesweeper</h1></a>
+	<nav>
+	<ul id="navigation_bar">
+	<li><a href="index.html">Home</a></li>
+	<li><a href="Rules.html">Rules</a></li>
+	<li id="Lboard"><a href="Leaderboard.html">Leaderboard</a></li>
+	</ul>
+	</nav>
+	<button style="background-color: transparent; border: none;" onclick="signout()">
+		<i class="fa-solid fa-arrow-right-from-bracket"></i></button>			
+	<a href="LoginPage.html"><button id="sign_in">Sign in</button></a>
+	</header>
+
+	
+	<div id="section1">
+	<div id="subsection1">
+	<h1>Minesweeper</h1>
+	<a href="game.html"><button id="guest">Play as guest</button></a>
+	<a href="SignupPage.html"><button id="create_account">Create Account</button></a>
+	</div>
+	</div>
+	<script>
+		// checks the local storage if the user is logged in
+		let loggedIn = localStorage.getItem('loggedIn') === 'true';
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const playAsGuest = document.getElementById('guest');
+		const loggedIn = localStorage.getItem('loggedIn') === 'true';
+		 // changes the button depending on which state the website is in
+
+		if (loggedIn) {
+			playAsGuest.innerText = 'Play Now';
+		} else {
+			playAsGuest.innerText = 'Play as Guest';
+		}
+});
+
+		function signout(){
+			if (!loggedIn) {
+        	alert("You are already logged out.");
+        	return; 
+    	}
+    	localStorage.setItem('loggedIn', 'false'); //signs the user out and changes the variable in the local storage
+    	alert("Signed Out Sucessfully");
+
+		}
+	</script>
+	<footer></footer>
+</body>
+</html>

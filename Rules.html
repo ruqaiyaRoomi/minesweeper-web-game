@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MineSweeper</title>
+	<link rel="stylesheet" href="../css/minesweeper.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+	<a href="index.html" id="game_title"><h1>Minesweeper</h1></a>
+	<nav>
+	<ul id="navigation_bar">
+	<li><a href="index.html">Home</a></li>
+	<li><a href="Rules.html">Rules</a></li>
+	<li id="Lboard"><a href="Leaderboard.html">Leaderboard</a></li>
+	</ul>
+	</nav>
+	<button style="background-color: transparent; border: none;" onclick="signout()">
+		<i class="fa-solid fa-arrow-right-from-bracket" onclick="signout()"></i></button>			
+	<a href="LoginPage.html"><button id="sign_in">Sign in</button></a>
+	
+	</header> 
+
+	<footer></footer>
+	
+	<h1 id="heading">How to play</h1>
+	<div id="rulesPage">
+		<ol>
+			<li>Clear the grid without clicking on any mines.</li>
+			<li>Begin by clicking on a cell. If it’s a mine, game over. If not, the cell will show a number or clear nearby cells.</li>
+			<li>Each number on a cell tells you how many mines are in the 8 neighboring cells around it. Use these numbers as clues to avoid mines.</li>
+			<li>Right-click on cells you suspect have mines to mark them with a flag. This helps you keep track, but use flags carefully!</li>
+			<li>The timer starts as soon as you click the first cell and tracks how long you take to complete the game. Aim to clear the grid as quickly as possible to set a high score, especially on higher levels.</li>
+			<li>You win by revealing all non-mine cells without hitting any mines!</li>
+		</ol>
+	</div>
+	<a href="game.html"><button id="play_button">Ready? Lets play!</button></a>
+
+	<script>
+		let loggedIn = localStorage.getItem('loggedIn') === 'true';
+		let playAsGuest = document.getElementById('guest')
+
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const playAsGuest = document.getElementById('guest'); // Assume this is the button element
+		const loggedIn = localStorage.getItem('loggedIn') === 'true';
+
+		if (loggedIn) {
+			playAsGuest.innerText = 'Play Now';
+		} else {
+			playAsGuest.innerText = 'Play as Guest';
+		}
+});
+
+		function signout(){
+			if (!loggedIn) {
+        	alert("You are already logged out.");
+        	return; 
+    	}
+    	localStorage.setItem('loggedIn', 'false');
+    	alert("Signed Out Sucessfully");
+
+		}
+	</script>
+</body>
+</html>

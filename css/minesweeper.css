@@ -1,0 +1,603 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: "Silkscreen";
+	font-weight: 400;
+	font-style: normal;
+	color:#EEEEEE;
+}
+
+body {
+
+	background-color: black;
+}
+
+header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	color: white;
+	height: 70px;
+	min-width: 600px;
+}
+
+button {
+	cursor:pointer;
+}
+
+
+#game_title{
+	text-decoration: none;
+	margin-left: 15px;
+	
+	margin-right:auto;
+}
+
+#navigation_bar{
+	list-style:none;
+	
+}
+
+#navigation_bar li {
+	display: inline-block;
+	margin: 0px 20px;
+	color: #EEEEEE; 
+	
+}
+
+#navigation_bar li, a{
+	
+	text-decoration: none;
+	transition: 0.3s;
+
+}
+
+#navigation_bar li a:hover{
+	color: #FF204E;
+	
+}
+
+
+#navigation_bar li ::before{
+	content:"";
+	position:absolute;
+	width: 3%;
+	height: 1.5px;
+	bottom: 90%;
+	background-color:  #FF204E;
+	transform: scaleX(0);
+	transition: transform 0.3s ease;
+	
+}
+
+#navigation_bar li :hover::before{
+	transform:scaleX(1);
+}
+
+
+#Lboard::before{
+	content:"";
+	position:absolute;
+	width: 5%;
+	height: 1.5px;
+	bottom: 90%;
+	background-color:  #FF204E;
+	transform: scaleX(0);
+	transition: transform 0.3s ease;
+	text-align:center;
+}
+
+
+#Lboard:hover::before{
+	transform:scaleX(1);
+}
+
+#sign_in{
+	background-color:  #FF204E;
+	font-size: 15px;
+	border: none;
+	width: 100px;
+	height: 30px;
+	border-radius: 20px;
+	transition: 0.5s;
+	cursor:pointer;
+	margin-right:20px;
+	margin-left:40px;
+}
+
+
+
+#sign_in:hover{
+	color:  #FF204E;
+	background-color: #EEEEEE;
+}
+
+
+header i {
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+#section1 {
+
+	display: inline-block;
+	height: 200px;
+	text-align: center;
+
+}
+
+#subsection1 {
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+#subsection1 h1 {
+	font-size: 100px;
+	margin-bottom:20px;
+
+}
+
+#subsection1 p {
+	font-size: 20px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+#subsection1 button{
+	margin-right:10px;
+	height: 55px;
+	width: 210px;
+	font-size: 18px;
+	
+}
+
+#guest {
+	background-color: transparent; 
+	color: white;
+	border: 2px solid   #FF204E;
+	border-radius: 20px;
+	transition: 0.5s;
+
+}
+
+#guest:hover{
+	border: none;
+	background-color:  #FF204E;
+	color: #EEEEEE;
+}
+
+
+#create_account {
+	background-color:  #FF204E;
+	color: #EEEEEE;
+	border: none;
+	border-radius: 20px;
+	transition: 0.5s;
+}
+
+#create_account:hover{
+	background-color: #EEEEEE;
+	color: #FF204E;
+	}
+	
+.container{
+	position: absolute;
+	top: 55%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 570px;
+	border: 2px solid  #FF204E;
+	box-shadow: 0 0 25px  #FF204E; 
+	background-color:  #FF204E;
+	transition: 0.5s ease;  
+	}
+	
+.register_link {
+	text-align: center;
+}
+	
+.signUp_box.signUp, .loginBox.Login{
+		left: 0;
+		padding: 0 40px;
+		width: 500px;
+		
+	}
+	
+.container .signUp_box, .container .loginBox {
+		position: absolute;
+		top: 0;
+		width: 60%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding-left: 70px;
+	
+		
+	}
+	
+	
+.signUp_box h1, .loginBox h1{
+		font-size: 32px;
+		text-align: center;
+	}
+	
+	
+.user_input{
+		position: relative;
+		width: 100%;
+		height: 50px;
+		margin-top:30px ;
+		margin-bottom: 20px;
+	}
+
+.user_input #confirm_password {
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+	
+.user_input input{
+		font-family: monospace;
+		width: 100%;
+		height: 100% ;
+		background: transparent;
+		border: none;
+		outline: none;
+		font-size: 16px;
+		color: white;
+		font-weight: 600;
+		border-bottom: 2px solid white;
+	
+		
+	}
+	
+.user_input label{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		font-size: 16px;
+		color: white;
+
+		transition: .5s;
+	}
+	
+.user_input input:focus ~ label, 
+.user_input input:valid ~ label {
+		top: -3px;
+		color: #151515;
+	}
+	
+.user_input i{
+		position: absolute;
+		top: 40%;
+		right: 0.5px;
+		font-size: 18px;
+		transform: translateX(-50%);
+		transition: .5s;
+	}
+	
+.user_input input:focus ~ i, 
+.user_input input:valid ~ i {
+		top: -4px;
+		color: #151515;
+	}
+	
+	
+#loginButton{
+		position: relative;
+		width: 100%;
+		height: 45px;
+		border-radius: 40px;
+		background-color: black;
+		border: none;
+		cursor: pointer;
+		font-weight: 600;
+		transition: .5s;
+		margin-top: 20px;
+	}
+	
+	
+#loginButton:hover{
+		background-color: #151515;
+	}
+
+
+
+#login_link{
+		position: absolute;
+		bottom: 4%;
+		left: 30%;
+	}
+
+#register_link{
+		text-align: center;
+		margin-top: 10px;
+	}
+
+#messages, #user_feedback, #email_feedback{
+	padding-top: 5px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.confirm_password, .user_Name{
+    transition: margin-top 0.5s ease; 
+}
+
+#rulesPage{
+	margin-top: 20px;
+	width: 600px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background-color: #FF204E;
+	box-shadow: 0 0px 25px #FF204E;
+}
+
+#rulesPage ol{
+	padding-left: 20px;
+}
+
+#play_button{
+	position:absolute;
+	top: 85%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	margin-right:10px;
+	color: white;
+	border-radius: 10px;
+	height: 50px;
+	width: 300px;
+	background-color: transparent;
+	border: 2px solid #FF204E;
+	transition: ease 0.5s;
+}
+
+
+#play_button:hover{
+	color: #FF204E;
+	background-color: white;
+	border: none;
+}
+
+#rules{
+	color: white;
+	border-radius: 10px;
+	height: 40px;
+	width: 160px;
+	position: absolute;
+	bottom: 8%;
+	left :37%;
+	background-color: transparent;
+	border: 2px solid #FF204E;
+	transition: ease 0.5s;
+}
+
+
+#rules:hover{
+	color: #FF204E;
+	background-color: white;
+	border: none;
+}
+
+#popup {
+	display: none;
+	text-align: center;
+	width: 500px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background-color: #FF204E;
+	border: 1px solid #ccc;
+	box-shadow: 0 0px 25px #FF204E;
+	z-index: 1000;
+}
+
+#popup p{
+	font-size: 30px;
+	padding-bottom: 10px;
+}
+
+#popup ol {
+	padding-left: 20px;
+	text-align: left;
+}
+
+#overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+#closePopup{
+	margin-top: 10px;
+	color: white;
+	width: 300px;
+	height: 30px;
+	border: none;
+	background-color: transparent;
+	transition: ease 0.5s;
+	border-radius: 10px;
+}
+
+
+#closePopup:hover{
+	color: #FF204E;
+	background-color: white;
+}
+
+#heading{
+	margin-top:30px;
+	text-align: center;
+	color: #EEEEEE;
+	font-size: 60px;
+}
+
+
+
+#heading_leaderboard{
+	margin-top:20px;
+	text-align: center;
+	color: #EEEEEE;
+	font-size: 60px;
+}
+
+table, tr, th, td{
+	border: solid black ;
+	background-color:  #FF204E;
+	width: 600px;
+	height: 40px;
+	border-collapse: collapse;
+}
+
+table{
+	position:absolute;
+	top: 55%;
+	left:50%;
+	transform: translate(-50%, -50%);
+
+}
+
+
+#level{
+	background-color: transparent;
+	color: white;
+	border: none;
+	outline: none;
+	
+}
+
+
+#level option {
+	background-color:  #FF204E;
+	border: none;
+	outline: none;
+}
+
+
+#gameBoard{
+	background-color:  #FF204E;
+	border-color: #002235;
+	border: 5px solid;
+	height:400px;
+	width: 400px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	position:absolute;
+	top: 55%;
+	left:50%;
+	transform: translate(-50%, -50%);
+
+}
+
+#gameBoard div {
+	width: 48px;
+	height: 48px;
+	border: 1px black solid;
+	border-style:outset;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.tile-Click{
+	background-color:  #f96885;
+}
+
+#gameLevel{
+	position: absolute;
+	width: 100px;
+	bottom: 75%;
+	left :60%;
+	transform: translate(-50%, -50%);
+	color:white;
+	background-color: black;
+ 
+}
+
+
+#resetButton{
+	color: white;
+	border-radius: 10px;
+	height: 40px;
+	width: 160px;
+	position: absolute;
+	bottom: 8%;
+	left :53%;
+	background-color: #FF204E;
+	border: none;
+
+}
+
+
+
+#displayTime{
+	position: absolute;
+	width: 150px;
+	bottom: 75%;
+	right :40%;
+	transform: translate(-50%, -50%);
+}
+
+.x1{
+	color: blue;
+}
+
+.x2{
+	color: green;
+}
+
+.x3{
+	color: red;
+}
+
+.x4{
+	color: navy;
+
+}
+
+.x5{
+	color: brown;
+}
+
+.x6{
+	color: teal;
+}
+
+.x7{
+	color: black;
+}
+
+.x8 {
+	color: gray;
+}
+
+
+#playAgain{
+	position: absolute;
+	background-color: #FF204E;
+	height: 35px;
+	width: 210px;
+	top: 92%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: none;
+	border-radius: 10px;
+}

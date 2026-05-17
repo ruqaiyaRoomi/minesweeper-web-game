@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MineSweeper</title>
+	<link rel="stylesheet" href="../css/minesweeper.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body >
+
+	
+    <header>
+        <a href="index.html" id="game_title"><h1>Minesweeper</h1></a>
+        <nav>
+        <ul id="navigation_bar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Rules.html">Rules</a></li>
+        <li id="Lboard"><a href="Leaderboard.html">Leaderboard</a></li>
+        </ul>
+        </nav>
+        <button style="background-color: transparent; border: none;" onclick="signout()">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i></button>			
+        <a href="LoginPage.html"><button id="sign_in">Sign in</button></a>
+	</header>
+	
+	<div class="container">
+		<div  class="signUp_box signUp">
+		<h1>Sign up</h1>
+			<form onsubmit=" return checkPassword() && checkUsername()">
+				
+                <div class="user_input user_Name">
+                    <input type="text" required id="username">
+                    <label>username</label>
+                    <i class="fa-regular fa-user"></i>
+                    <p id="user_feedback"></p>
+                    
+                </div>
+
+                <div class="user_input">
+                    <input type="text" required id="user_email">
+                    <label>email</label>
+                    <i class="fa-regular fa-envelope"></i>
+                    <p id="email_feedback"></p>
+                </div>
+                
+
+                <div class="user_input">
+                    <input type="password"  id="userPassword" required>
+                    <label>Password</label>
+                    <i class="fa-regular fa-eye-slash"></i>
+                    <p id="messages"></p>
+				</div>
+				<div class="user_input confirm_password">
+                    <input type="password" required id="confirmPassword">
+                    <label>confirm Password</label>
+                    <i class="fa-regular fa-eye-slash"></i>
+                    <div id="confirm_password"></div>
+				</div>
+				<button id="loginButton" onclick="storeUser()">Sign up</button>
+				<div id="login_link">
+				<a href="LoginPage.html">Already have an account? Login!</a>
+				</div>
+			</form>
+		</div>	
+	</div>
+	<footer></footer>
+
+
+    <script src="../JavaScript/signUp.js">
+       
+    </script>
+</body>
+</html>
