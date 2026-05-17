@@ -92,7 +92,7 @@ function signout(){
     resetBoard();  // resets the board and the level when signed out
     select_level();
     localStorage.setItem('loggedIn', 'false'); // updates the local storage
-    alert("Signed Out Sucessfully");
+    alert("Signed out successfully");
 }
 
 

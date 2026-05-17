@@ -24,7 +24,7 @@ function checkPassword(){
         if(user_password.length < 8){
             invaild_messages.push("Your password is too short");
             submit_button.disabled = true;
-            console.log("jskjdf")
+            
         } // lower case 
         if(!/[a-z]/.test(user_password)){
             invaild_messages.push("Your password must contain at least one lowercase letter");
@@ -224,7 +224,7 @@ function storeUser() {
     localStorage.setItem('loggedIn', 'true');
     localStorage[userInfo.user_name] = JSON.stringify(userInfo);
     localStorage[userInfo.user_email] =  JSON.stringify(userInfo);
-    alert("Registerd");
+    alert("Registered successfully");
 
 }
 // signout function
@@ -236,6 +236,6 @@ function signout(){
     }
 
     localStorage.setItem('loggedIn', 'false');
-    alert("Signed Out Sucessfully");
+    alert("Signed out successfully");
 }
 

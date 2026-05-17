@@ -48,7 +48,7 @@ function signout(){
     }
 
     localStorage.setItem('loggedIn', 'false');
-    alert("Signed Out Sucessfully");
+    alert("Signed out successfully");
 }
 
 
